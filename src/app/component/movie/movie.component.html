@@ -1,6 +1,6 @@
 <div class="row movie" *ngIf="movie" style="margin-top: 70px;">
-  <div class="col-md-4 col-xs-12">
-    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="" class="thumbnail" style="height: 555px!important;">
+  <div  class="col-md-4 col-xs-12 poster_path">
+    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="" class="thumbnail" style="height: 555px;">
     <p>
       <a *ngIf="movie.homepage" href="{{movie.homepage}}" class="btn btn-info btn-block" target="_blank">Visit Movies Website</a>
     </p>
@@ -14,7 +14,7 @@
      
     </div>
     <div class="col-md-6" style="margin-top: 25px;">
-      <a routerLink="/genres/{{genre.id}}/{{genre.name}}" *ngFor="let genre of movie.genres" class="label label-info m-r-md" style="font-size: 15px;">
+      <a routerLink="/genres/{{genre.id}}/{{genre.name}}" *ngFor="let genre of movie.genres" class="label label-info m-r-md" style="font-size: 12px;">
         {{genre.name}}
       </a>
      </div> 
@@ -55,7 +55,7 @@
 </div>
 <!--Trailer-->
 <!--Similar Movies-->
-<div class="row is-flex" *ngIf="similarMovies && similarMovies.length > 0" >
+<div class="row is-flex" style="overflow: hidden;" *ngIf="similarMovies && similarMovies.length > 0" >
   <div class="col-md-12" style="margin-top: 50px;margin-bottom: 50px;">
     <h2 style="color: #fff;text-align: center;outline: #2F4F4F solid 10px;">Similar Movies</h2>
   </div>
@@ -68,7 +68,7 @@
   <div class="col-md-12" style="margin-top: 50px;margin-bottom: 50px;">
     <h2 style="color: #fff;text-align: center;outline: #2F4F4F solid 10px;">Reviews</h2>
   </div>
-  <div class="col-md-6" *ngFor="let review of reviews">
+  <div class="col-md-6 col-xs-12" *ngFor="let review of reviews">
     <blockquote>
       <p class="text-justify" style="color: #fff">{{review.content}}</p>
       <footer><cite title="{{review.author}}"><a href="{{review.url}}" target="_blank">{{review.author}}</a></cite></footer>
