@@ -1,0 +1,32 @@
+<div class="row actor" *ngIf="person" style="margin-top: 70px; margin-right: 0px;margin-left: 0px;">
+ 
+    <div class="thumbnail col-md-6" style="height: 530px!important">
+      <img style="width: 347px;" src="https://image.tmdb.org/t/p/w300/{{person.profile_path}}" *ngIf="person.profile_path">
+      <img src="assets/img/abstract-image.jpg"*ngIf="!person.profile_path">
+  </div>
+      <div class="caption col-md-6" style="color: #fff; font-size: 20px;">
+        <h2 class="text-ellipsis">
+          {{person.name}}
+        </h2>
+        <p><strong>Biography: </strong>{{(person.biography.length>700)?(person.biography | slice:0:700)+'...':(person.biography)}}</p>
+        <p><strong>Birthday: </strong>{{person.birthday}}</p>
+        <p><strong>Place of Birth: </strong>{{person.place_of_birth}}</p>
+        <p>
+          <strong>Popularity</strong>
+          <small class="label label-success">
+              {{person.popularity}}
+              <i class="glyphicon glyphicon-star"></i>
+            </small>
+        </p>
+      </div>
+    
+  
+  <div class="col-md-12">
+    <h3 class="orange-text" style="outline: #2F4F4F solid 10px;text-align: center;color: #fff;font-size: 30px;margin-bottom: 30px;">Movies</h3>
+    <div class="row is-flex">
+      <div class="col-sm-4" *ngFor="let movie of movies; let i = index;">
+        <movie-card [movie]="movie"></movie-card>
+      </div>
+    </div>
+</div>
+ 

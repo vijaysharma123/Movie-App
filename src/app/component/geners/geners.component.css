@@ -1,0 +1,12 @@
+.orange-text {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    outline: #2F4F4F solid 10px;
+    margin-bottom: 35px;
+}
+@media only screen and (max-width: 500px) {
+    .genre {
+        margin-top: 0px!important;
+    }
+}

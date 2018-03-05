@@ -1,0 +1,23 @@
+
+  <div class="card" style="margin-bottom: 50px;">
+    <div class="image">
+      <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path">
+  <img src="assets/img/abstract-image.jpg" *ngIf="!movie.poster_path">
+    </div>
+    <a routerLink="/movie/{{movie.id}}">
+      <div class="details">
+      <div class="center">
+        <h1><a class="movie-title" routerLink="/movie/{{movie.id}}" title="{{movie.title}}">{{movie.title}}</a></h1>
+    <p>{{movie.release_date}}<small class="label label-success pull-right" *ngIf="movie.vote_average">
+        {{movie.vote_average}}
+        <i class="glyphicon glyphicon-star"></i>
+      </small></p>
+        <p > {{ (movie.overview.length>250)? (movie.overview | slice:0:150)+'....':(movie.overview) }}
+</p>
+        <span class="label label-danger" style="padding: 8px;font-size: 12px; text-align: center;">
+      <a class="view-details" routerLink="/movie/{{movie.id}}">View details &raquo;</a></span>
+
+    </div>
+    </div>
+  </a>
+  </div>

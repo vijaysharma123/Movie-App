@@ -1,0 +1,38 @@
+.text-ellipsis {
+    text-overflow: ellipsis;
+}
+.effect5
+{
+	box-shadow: 6px 4px 68px 21px;
+	
+}
+.orange-text {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    outline: #2F4F4F solid 10px;
+    margin-bottom: 65px;
+    margin-top: 10px;
+}
+.thumbnail
+{
+	width: 100%;
+	height: 380px;
+	background-color: #2F4F4F;
+}
+.carousel-inner img
+{
+    height: 400px;
+}
+@media only screen and (max-width: 500px) {
+    .movies {
+        margin-top: 0px!important;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .input-group {
+        margin-top: 0px!important;
+    }
+}

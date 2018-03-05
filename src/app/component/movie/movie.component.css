@@ -1,0 +1,18 @@
+img {
+    width: 100%;
+}
+
+.m-r-md {
+    margin-right: 5px;
+}
+.thumbnail
+{
+	width: 100%;
+	height: 380px;
+	background-color: #2F4F4F;
+}
+@media only screen and (max-width: 500px) {
+    .movie {
+        margin-top: 0px!important;
+    }
+}

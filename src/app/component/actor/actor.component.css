@@ -1,0 +1,10 @@
+.thumbnail
+{
+   height: 380px;  
+	background-color: #2F4F4F;
+}
+@media only screen and (max-width: 500px) {
+    .actor {
+        margin-top: 0px!important;
+    }
+}

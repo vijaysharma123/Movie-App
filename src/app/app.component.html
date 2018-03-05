@@ -1,0 +1,49 @@
+<nav class="navbar navbar-fixed-top navbar-inverse" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+       
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/" style="color: #fff;">Movies Finder</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+       
+    </div>
+    <!-- /.nav-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<div class="row" style="width: 100%;margin-left: 0px;margin-right: 0px;">
+  <div class="col-md-2 col-xs-12">
+    <br><br><br>
+
+        <div class="nav-side-menu">
+            <div class="brand">Category</div>
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+            
+                <div class="menu-list">
+          
+                    <ul id="menu-content" class="menu-content collapse out">
+                        <li *ngFor="let genre of genres" routerLink="/genres/{{genre.id}}/{{genre.name}}" routerLinkActive="active">
+                          <a>
+                          <i class="fa fa-angle-double-right fa-lg"></i> {{genre.name}}
+                          </a>
+                        </li>
+                    </ul>
+             </div>
+        </div>
+  </div>
+  <div class="col-md-10 col-xs-12">
+      <router-outlet></router-outlet>
+  </div>
+  <hr> 
+   <footer>
+    <p class="pull-right" style="color: #fff">
+      <a href="https://github.com/vijaysharma123" target="_blank" style="text-decoration: none; color: #fff;">Developed By Vijay Sharma</a></p>
+  </footer>
+</div>
+  
