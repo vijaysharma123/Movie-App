@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent {
+  poster_path:object
 
   @Input()
   movie: Object;
